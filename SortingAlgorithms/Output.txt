@@ -1,0 +1,4 @@
+Time in (ms)	input1	input2	input3	
+Selection Sort	5        	61        	4188	
+Insertion Sort	5        	53        	3941      	
+Merge Sort              	2        	4	10	
