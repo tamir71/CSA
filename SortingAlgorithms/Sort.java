@@ -286,8 +286,4 @@ public class Sort {
         
     }
     
-    public static void timeDuration(String[] args) {
-           
-    }
-    
 }
