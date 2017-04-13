@@ -200,29 +200,38 @@ public class Sort {
      *Return: none
      */
     public static void merge(int[] intArray, int[] temp, int left, int mid, int right) {
+        //Copy intArray into temp array
+        for (int i = left; i <= right; i++) {
+            temp[i] = intArray[i];   
+        }
+        
         int i = left;   //Temporary counter for left
         int j = mid+1;  //Temporary counter for right
-        int k = i;      //Temporary index counter
+        int k = left;      //Temporary index counter
         
         //While halves are not sorted yet
-        while (i <= j && mid <= right) { 
+        while (i <= mid && j <= right) { 
             
             //If left is smaller than right
             if (Integer.compare(intArray[left], intArray[mid]) <= 0) { 
                 //Sort left value to temp
-                temp[i++] = intArray[left++];
+                intArray[k] = temp[i];
+                i++;
             }
             //If right is smaller than left
             else {
                 //Sort right value to temp
-                temp[i++] = intArray[mid++];
+                intArray[k] = temp[j];
+                j++;
             }
+            k++;
             
         }
         
         //When a half is already sorted, just fill rest of values into temp
         while (i <= j-1) {
-            intArray[i++] = temp[i++];
+            intArray[k] = temp[i];
+            i++;
         }
         
     }
@@ -235,7 +244,7 @@ public class Sort {
      *Return: none
      */
     
-    public static void runStats(int[] sorted){ 
+    public static void runStats(int[] sorted) { 
         System.out.print("First 10 values: ");
         for (int i = 0; i < 10; i++) {
             System.out.print(sorted[i] + " ");
@@ -248,4 +257,25 @@ public class Sort {
         System.out.printf("\n");
     }
     
+    
+    public static void testAllTable(Strings[]) {
+        Scanner file1 = new Scanner(new File("input/input1.txt"));
+        int[] file1 = stringToInt(fil1.nextLine().split(","));
+        selectionSort(file1);
+        insertionSort(file1);
+        mergeSort(file1);
+        
+        Scanner file2 = new Scanner(new File("input/input2.txt"));
+        int[] file2 = stringToInt(fil1.nextLine().split(","));
+        selectionSort(file2);
+        insertionSort(file2);
+        mergeSort(file2);
+        
+        Scanner file3 = new Scanner(new File("input/input3.txt"));
+        int[] file3 = stringToInt(fil1.nextLine().split(","));
+        selectionSort(file3);
+        insertionSort(file3);
+        mergeSort(file3);
+
+    }
 }
