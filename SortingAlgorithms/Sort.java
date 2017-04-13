@@ -265,21 +265,21 @@ public class Sort {
         
         System.out.println("Input 1     ");
         Scanner file1 = new Scanner(new File("input/input1.txt"));
-        int[] file1 = stringToInt(fil1.nextLine().split(","));
+        int[] file1 = stringToInt(file1.nextLine().split(","));
         selectionSort(file1);
         insertionSort(file1);
         mergeSort(file1);
         
         System.out.println("Input 2     ");
         Scanner file2 = new Scanner(new File("input/input2.txt"));
-        int[] file2 = stringToInt(fil1.nextLine().split(","));
+        int[] file2 = stringToInt(file2.nextLine().split(","));
         selectionSort(file2);
         insertionSort(file2);
         mergeSort(file2);
         
         System.out.println("Input 3     ");
         Scanner file3 = new Scanner(new File("input/input3.txt"));
-        int[] file3 = stringToInt(fil1.nextLine().split(","));
+        int[] file3 = stringToInt(file3.nextLine().split(","));
         selectionSort(file3);
         insertionSort(file3);
         mergeSort(file3);
