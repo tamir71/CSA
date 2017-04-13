@@ -117,7 +117,7 @@ public class Sort {
         
         endTime = System.currentTimeMillis(); //End time after algorithm
         duration = endTime - startTime;
-        System.out.println("The sort took " + duration + " milliseconds");
+        System.out.println(/* "The sort took " + */ duration /* + " milliseconds" */);
         return intArray;
     }
     
@@ -145,7 +145,7 @@ public class Sort {
         
         endTime = System.currentTimeMillis(); //End time after algorithm
         duration = endTime - startTime;
-        System.out.println("The sort took " + duration + " milliseconds");
+        System.out.println(/* "The sort took " + */ duration /* + " milliseconds" */);
         return intArray;
     }
 
@@ -165,7 +165,7 @@ public class Sort {
         
         endTime = System.currentTimeMillis(); //End time after algorithm
         duration = endTime - startTime;
-        System.out.println("The sort took " + duration + " milliseconds");
+        System.out.println(/* "The sort took " + */ duration /* + " milliseconds" */);
         return intArray;
     }
     
@@ -256,26 +256,38 @@ public class Sort {
         }
         System.out.printf("\n");
     }
-    
-    
-    public static void testAllTable(Strings[]) {
+   
+    public static void testAllTable(String[] args) {
+        
+        System.out.println("Selection   ");
+        System.out.println("Insertion   ");
+        System.out.println("Merge       ");
+        
+        System.out.println("Input 1     ");
         Scanner file1 = new Scanner(new File("input/input1.txt"));
         int[] file1 = stringToInt(fil1.nextLine().split(","));
         selectionSort(file1);
         insertionSort(file1);
         mergeSort(file1);
         
+        System.out.println("Input 2     ");
         Scanner file2 = new Scanner(new File("input/input2.txt"));
         int[] file2 = stringToInt(fil1.nextLine().split(","));
         selectionSort(file2);
         insertionSort(file2);
         mergeSort(file2);
         
+        System.out.println("Input 3     ");
         Scanner file3 = new Scanner(new File("input/input3.txt"));
         int[] file3 = stringToInt(fil1.nextLine().split(","));
         selectionSort(file3);
         insertionSort(file3);
         mergeSort(file3);
-
+        
     }
+    
+    public static void timeDuration(String[] args) {
+           
+    }
+    
 }
